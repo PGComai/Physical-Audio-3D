@@ -53,12 +53,16 @@ func _ready() -> void:
 	
 	if show_audio_position:
 		var new_meshinstance := MeshInstance3D.new()
-		var new_mesh := SphereMesh.new()
+		var new_mesh := QuadMesh.new()
 		new_meshinstance.mesh = new_mesh
 		add_child(new_meshinstance)
 		
 		var new_material := StandardMaterial3D.new()
 		new_material.no_depth_test = true
+		new_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		new_material.albedo_texture = preload("res://addons/physical_audio_3d/audio_texture.png")
+		new_material.billboard_mode = BaseMaterial3D.BILLBOARD_ENABLED
+		new_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
 		new_meshinstance.material_override = new_material
 
 	var new_rcf := RayCast3D.new()
