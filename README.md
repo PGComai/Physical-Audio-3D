@@ -1,6 +1,8 @@
 # Physical-Audio-3D
 A Godot addon that adds (more) realistic 3D audio behavior.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y0NJZLS)
+
 ## How to use
 Add a PhysicalAudio3D node to your scene. Set the Audio Target to the node which will be hearing the audio.
 
